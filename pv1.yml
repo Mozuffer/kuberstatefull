@@ -1,0 +1,13 @@
+apiVersion: "v1"
+kind: "PersistentVolume"
+metadata:
+  name: "azpv0001"
+spec:
+  capacity:
+    storage: "3Gi"
+  accessModes:
+    - "ReadWriteOnce"
+  azureFile:
+    secretName: azure-secret
+    shareName: db01
+    readOnly: false
